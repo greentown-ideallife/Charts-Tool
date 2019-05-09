@@ -1,0 +1,19 @@
+{
+    "name": "ChartsTool",
+    "identifier": "cm.sketch.ChartsTool.my",
+    "compatibleVersion": 3,
+    "bundleVersion": 1,
+    "icon": "../Resources/icon.png",
+    "commands": [
+        {
+            "name": "ChartsTool",
+            "script": "index.js",
+            "identifier": "sketch-ChartsTool"
+        }
+    ],
+    "menu": {
+        "title": "ChartsTool_index",
+        "isRoot": true,
+        "items": ["sketch-ChartsTool"]
+    }
+}

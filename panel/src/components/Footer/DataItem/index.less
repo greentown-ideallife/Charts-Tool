@@ -1,0 +1,20 @@
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 8px;
+    .time {
+        display: block;
+    }
+    .apply {
+        display: none;
+    }
+    &:hover {
+        background: #ddeaf5;
+        .time {
+            display: none;
+        }
+        .apply {
+            display: block;
+        }
+    }
+}

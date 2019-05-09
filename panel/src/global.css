@@ -1,0 +1,11 @@
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+/* 针对sketch-color 组件更改颜色时触发报错解决办法。参考https://www.jianshu.com/p/04bf173826aa */
+* { touch-action: pan-y; } 

@@ -1,0 +1,51 @@
+{
+    "name": "sketch-ChartsTool",
+    "version": "0.1.0",
+    "description": "ChartsTool plugin for UI and Frontend developers",
+    "main": "index.js",
+    "engines": {
+        "sketch": ">=3.0",
+        "node": ">=8.0"
+    },
+    "scripts": {
+        "start": "yarn start:panel",
+        "start:all": "concurrently \"yarn start:panel\" \"yarn start:plugin\"",
+        "build": "yarn build:plugin && yarn build:panel",
+        "build:analyze": "cd panel && ANALYZE=1 umi build",
+        "build:plugin": "skpm-build && mkdir -p ChartsTool.sketchplugin/Contents/Resources && cp -rf src/icons/*.png ChartsTool.sketchplugin/Contents/Resources",
+        "copy": "cd panel/scripts && node copyStaticFile",
+        "build:panel": "cd panel && umi build",
+        "start:panel": "cd panel && umi dev",
+        "start:plugin": "skpm-build --watch --run",
+        "postinstall": "yarn build && skpm-link"
+    },
+    "skpm": {
+        "name": "ChartsTool",
+        "manifest": "src/manifest.json",
+        "main": "ChartsTool.sketchplugin",
+        "assets": [
+            "dist/**/*"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/daughterRui/Charts-Tool.git"
+    },
+    "keywords": ["sketch", "plugin", "bizcharts", "chart", "tool"],
+    "author": "xty",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/daughterRui/Charts-Tool/issues"
+    },
+    "homepage": "https://github.com/daughterRui/Charts-Tool",
+    "devDependencies": {
+        "umi": "^2.1.2",
+        "umi-plugin-react": "^1.1.1",
+        "@skpm/builder": "^0.5.12",
+        "concurrently": "^4.1.0",
+        "husky": "^1.2.1",
+        "prettier": "^1.15.3",
+        "pretty-quick": "^1.8.0",
+        "sketch-module-web-view": "^3.0.0"
+    }
+}

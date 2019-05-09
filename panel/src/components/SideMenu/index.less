@@ -1,0 +1,25 @@
+.container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50px;
+    border-right: 1px solid #dddddd;
+    padding: 10px;
+    height: 100%;
+    .item {
+        border: 0.5px solid #dddddd;
+        border-radius: 4px;
+        text-align: center;
+        vertical-align: middle;
+        margin: 12px 0;
+        cursor: pointer;
+        &:hover {
+            border-color: rgb(87, 156, 255);
+            transition-duration: .5s;
+        }
+        & i {
+            color: rgb(87, 156, 255);
+            font-size: 18px;
+        }
+    }
+}

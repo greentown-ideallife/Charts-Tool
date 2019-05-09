@@ -1,0 +1,52 @@
+.container {
+    width: 220px;
+    padding: 20px;
+    overflow-y: auto;
+    .chartList {
+        width: 182px;
+        height: 170px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .screenshot {
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 2px 8px #e5f4f0;
+            background: #fff;
+            transition: all .4s;
+            transform: translateY(0);
+            position: relative;
+            background-size: contain!important;
+            background-repeat: no-repeat!important;
+            background-position: 50%!important;
+            cursor: pointer;
+            &:hover {
+                border: 2px solid #2593FC;
+                border-radius: 2px;
+                & .footerText {
+                    display: block;
+                }
+            }
+            .footerText {
+                display: none;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                text-align: center;
+                width: 100%;
+                background: #2593FC;
+                color: #fff;
+                line-height: 22px;
+            }
+        }
+        &>p {
+            border-top: 1px solid #e6e7eb;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+            margin: 0;
+        }
+    }
+}
